@@ -1,0 +1,85 @@
+* {
+    font-family: 'Calibri', sans-serif;
+    font-size: 20px;
+    color: #000000
+}
+body {
+    padding-top: 30px;
+    background-image: url("resources/21-2.jpg");
+    background-size: 100%;
+}
+.container {
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 4px ridge #381500;
+}
+th {
+    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+}
+tr {
+    height: 30px;
+}
+td {
+    padding: 15px;
+    text-align: center;
+}
+.main,.controls,.start,.counts,.result {
+    text-align: center  ;
+}
+.cnt {
+    margin-right: 12px;
+}
+.cnt-last {
+    margin-right: 0;
+}
+.result span{
+    font-size: 40px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+button.new_game {
+    font-size: 25px;
+}
+.controls button {
+    font-size: 24px;
+}
+.take_card {
+    margin-right:12px;
+}
+span.win {
+    color:green;
+}
+span.defeat {
+    color:red;
+}
+button.btn {
+    box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.7);
+    text-shadow: 1px 1px 3px black,2px 2px 3px black,-1px -1px 3px black;
+}
+img.cards {
+    box-shadow: 3px 3px 9px -2px rgba(0,0,0,0.7),5px 5px 9px -2px rgba(0,0,0,0.5);
+    margin: 5px 5px;
+    height: 170px;
+}
+.counts span {
+    font-size: 22px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+.main {
+    border: 9px ridge #381500;
+    background-image: url("resources/div-bg-1.jpg");
+    background-size: 100%;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    min-width:570px;
+    width: fit-content;
+    max-width: 90vw;
+}
+.main div{
+    color: #fff;
+    text-shadow: 1px 1px 3px black,2px 2px 3px black,-1px -1px 3px black;
+}
