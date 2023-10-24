@@ -1,3 +1,4 @@
+if (!localStorage.getItem('deck')) new_game()
 update_cards()
 update_score()
 check_score()
@@ -11,9 +12,9 @@ document.getElementById('new_game').addEventListener('click', function(e) {
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
-            confirmButtonText: '<b>Сдаюсь</b>',
+            confirmButtonText: '<b class="swal">Сдаюсь</b>',
             cancelButtonColor: '#d33',
-            cancelButtonText: '<b>Русские не сдаются</b>'
+            cancelButtonText: '<b class="swal">Русские не сдаются</b>'
         }).then((result) => {
             if(result.isConfirmed) {
                 localStorage.setItem('games_cnt', parseInt(localStorage.getItem('games_cnt'))+1)
@@ -36,6 +37,9 @@ document.getElementById('take_card').addEventListener('click', function(e) {
 
 /*--Новая игра--*/
 function new_game() {
+    if(!localStorage.getItem('games_cnt')) localStorage.setItem('games_cnt', 0)
+    if(!localStorage.getItem('wins_cnt')) localStorage.setItem('wins_cnt', 0)
+    if(!localStorage.getItem('losses_cnt')) localStorage.setItem('losses_cnt', 0)
     create_deck()
     localStorage.setItem('game_started','true')
     localStorage.setItem('result','')
@@ -241,11 +245,6 @@ function check_score(isInGame){
 /*Записываем результат */
 function set_result(result,isBJ) {
     localStorage.setItem('result',result)
-
-    if(!localStorage.getItem('games_cnt')) localStorage.setItem('games_cnt', 0)
-    if(!localStorage.getItem('wins_cnt')) localStorage.setItem('wins_cnt', 0)
-    if(!localStorage.getItem('losses_cnt')) localStorage.setItem('losses_cnt', 0)
-    
     let game_started = localStorage.getItem('game_started')
     if (game_started=='true') {
         localStorage.setItem('games_cnt', parseInt(localStorage.getItem('games_cnt'))+1)
