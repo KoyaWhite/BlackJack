@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>21</title>
+</head>
+<body>
+    <div class="start">
+        <button class="new_game btn btn-primary" id="new_game">Новая игра</button>
+    </div>
+    <div class="container col-xxl-3 mt-3">
+        <div class="counts">
+            <span class="cnt">Кол-во игр: <span id="games_cnt"></span></span>
+            <span class="cnt">Проигрышей: <span id="losses_cnt"></span></span>
+            <span class="cnt cnt-last">Побед: <span id="wins_cnt"></span></span>
+        </div>
+    </div>
+    <div class="container result mt-3 col-xxl-2">
+        <span id="result"></span>
+    </div>
+    <div class="container main mt-3">
+        <div class="dealer_text text">Карты крупье:</div>
+        <div class="dealer_cards cards"></div>
+        <div class="dealer_score score"></div>
+    </div>
+    <div class="container main mt-3">
+        <div class="player_text text">Ваши карты:</div>
+        <div class="player_cards cards"></div>
+        <div class="player_score score"></div>
+    </div>
+    <div class="mt-3 controls">
+        <button class="btn btn-success take_card" id="take_card">Ещё карту</button>
+        <button class="btn btn-danger stop" id="stop">Хватит</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
