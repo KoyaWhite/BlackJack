@@ -250,13 +250,12 @@ function set_result(result,isBJ) {
         localStorage.setItem('games_cnt', parseInt(localStorage.getItem('games_cnt'))+1)
         if (result=='victory') {
             localStorage.setItem('wins_cnt',parseInt(localStorage.getItem('wins_cnt'))+1)
-            update_ui()
         } else if (result == 'defeat') {
             localStorage.setItem('losses_cnt',parseInt(localStorage.getItem('losses_cnt'))+1)
-            update_ui()
-        }
+        } 
     }
     localStorage.setItem('game_started','false')
+    update_ui()
 
 }
 /*Клик на кнопку стоп*/
@@ -271,6 +270,7 @@ function update_ui() {
         let res_span = document.getElementById('result')
         if (result == 'victory') result = '<span class="win">'+'Победа!'+'</span>'
         if (result == 'defeat') result = '<span class="defeat">'+'Поражение.'+'</span>'
+        if (result == 'draw') result = '<span class="draw">'+'Ничья'+'</span>'
         res_span.innerHTML=result
     } else {
         document.querySelector('div.result').hidden=true
