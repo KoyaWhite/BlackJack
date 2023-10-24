@@ -53,7 +53,10 @@ span.win {
     color:green;
 }
 span.defeat {
-    color:red;
+    color: #b10000;
+}
+span.draw {
+    color: #b37a00;
 }
 button.btn {
     box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.7);
