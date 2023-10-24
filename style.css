@@ -3,10 +3,11 @@
     font-size: 20px;
     color: #000000
 }
-body {
+html,body {
     padding-top: 30px;
     background-image: url("resources/21-2.jpg");
-    background-size: 100%;
+    background-size: cover;
+	height:100%;
 }
 .container {
     background-color: #f8f8f8;
